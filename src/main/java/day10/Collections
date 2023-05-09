@@ -1,0 +1,16 @@
+
+  Collections is an API
+  We have interfaces like,
+  1) List
+       *ArrayList
+       *LinkedList
+
+  2) Sets
+       *HashSet
+       *LinkedHashSet
+       *TreeSet
+
+  3) Maps
+       *HashMap
+       *LinkedHashMap
+       *TreeMap

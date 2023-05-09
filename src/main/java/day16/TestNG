@@ -1,0 +1,48 @@
+ *)TestNG is a part of JUnit Framework.
+ *)JUnit is for developers.
+ *)TestNG is for Testers.
+
+ Hierarchy:
+           --Suite
+             --Test
+               --Class
+                 --Method
+
+ * One Suite contains multiple Tests
+ * One Test contains multiple Classes
+ * One Class contains multiple Methods
+ * @ refers to Annotations
+
+
+          -----Suite----
+                ----Test---
+                      ---Class--
+                               -Method-
+                               -Method-
+                      ---Class--
+                               -Method-
+                               -Method-
+                      ---Class--
+                               -Method-
+                               -Method-
+                 ----Test---
+                      ---Class--
+                                -Method-
+                                -Method-
+                      ---Class--
+                                -Method-
+                                -Method-
+                      ---Class--
+                                -Method-
+                                -Method-
+
+ * @Test is the Automation Script
+  * At the method level: @Test, @Before Method, @After Method
+  * At the Class level:  @Before Class, @After Class
+  * At the Test level:   @Before Test, @After Test
+  * At the Suite level:  @Before Suite,@After Suite
+
+
+
+
+

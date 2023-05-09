@@ -1,0 +1,11 @@
+package automatedScripts;
+
+public class Facebook extends Instagram{
+    public static void main(String[] args)
+    {
+     Facebook fb=new Facebook();
+     fb.launchApp("https://www.google.com/search?q=facebook&rlz=1C1CHBF_enIN1052IN1052&sxsrf=APwXEdcchWzySr6NJdE_Wsz28KLlY9Ncmw%3A1681488331300&ei=y3k5ZNfqEd3F4-EPs7y4-As&oq=&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgBMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMhUILhCKBRDHARDRAxDqAhC0AhBDGAIyDwgAEIoFEOoCELQCEEMYAjIVCC4QigUQxwEQ0QMQ6gIQtAIQQxgCMg8IABCKBRDqAhC0AhBDGAIyDwgAEIoFEOoCELQCEEMYAjIPCAAQigUQ6gIQtAIQQxgCMg8IABCKBRDqAhC0AhBDGAIyDwgAEIoFEOoCELQCEEMYAjIPCAAQigUQ6gIQtAIQQxgCMg8IABCKBRDqAhC0AhBDGAI6CggAEEcQ1gQQsAM6CggAEIoFELADEEM6FQguEIoFEMcBENEDEMgDELADEEMYAToPCC4QigUQyAMQsAMQQxgBOgYIIxAnEEM6EAgAEIAEEBQQhwIQsQMQgwE6CwgAEIAEELEDEIMBOgUIABCABDoICAAQgAQQsQNKBAhBGABQqwtYiRFg-x1oAnABeASAAfwBiAHPCJIBBTAuMS40mAEAoAEBsAEUyAEMwAEB2gEECAEYCNoBBggCEAEYAQ&sclient=gws-wiz-serp");
+     fb.Search();
+     fb.TearDown();
+    }
+}

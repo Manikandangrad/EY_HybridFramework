@@ -1,0 +1,26 @@
+  SELENIUM LOCATORS
+       *id
+       *name
+       *classname
+       *tagname
+       *link text
+       *partial linktext
+       *xpath
+       *css
+
+*ID:
+   driver.findElement(By.id("form-control")).sendkeys("1000");
+*NAME:
+   driver.findElement(By.name("form-control")).sendkeys("1000");
+*ClassName:
+   driver.findElement(By.className("form-control")).sendkeys("1000");
+*Tagname:
+    driver.findElement(By.tagName("form-control")).sendkeys("1000");
+*Link Text:
+    driver.findElement(By.linkText("form-control")).click();
+*Partial Linktext:
+    driver.findElement(By.partialLinkText("form-control")).click();
+*Xpath:
+    driver.findElement(By.xpath("//input[@id='form-control']")).sendkeys("1000");
+*Css:
+    driver.findElement(By.cssSelector("input[id='form-control']")).sendkeys("1000");
