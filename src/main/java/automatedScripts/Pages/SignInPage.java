@@ -16,7 +16,7 @@ public class SignInPage {
     @FindBy(xpath = "//input[@value='Login']")
     public WebElement btn_Login;
 
-    @FindBy(xpath="//b[text()='Sorry we were unable to complete this step because:]")
+    @FindBy(xpath="/html/body/table[2]/tbody/tr[1]/td/table[1]/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/font/b")
     public  WebElement lbl_errorMsg;
 
 //    Constructor
