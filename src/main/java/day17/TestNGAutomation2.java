@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 
 public class TestNGAutomation2 extends BaseScript2 {
     @Test(dataProvider = "emiDataProvider", dataProviderClass = DataProvider2.class)
-    public void valid_emiCalculations(String amount,String rate,String tenure,String ExpectedEMI){
+    public void valid_emiCalculations(String Amount,String Rate,String Tenure,String ExpectedEMI){
 
         //Enter the value//
-        driver.findElement(By.id("loanamount")).sendKeys(amount);
-        driver.findElement(By.id("rate")).sendKeys(rate);
-        driver.findElement(By.id("pmonths")).sendKeys(tenure);
+        driver.findElement(By.id("loanamount")).sendKeys(Amount);
+        driver.findElement(By.id("rate")).sendKeys(Rate);
+        driver.findElement(By.id("pmonths")).sendKeys(Tenure);
 
         //Click the Button//
         driver.findElement(By.id("Button1")).click();

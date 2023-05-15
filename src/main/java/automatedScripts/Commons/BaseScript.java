@@ -50,7 +50,7 @@ public class BaseScript {
                 driver.get("https://books.rediff.com/");
                 driver.manage().window().maximize();
                 break;
-
+//
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();

@@ -1,2 +1,4 @@
-package automatedScripts.TestScripts;public class SearchScript {
+package automatedScripts.TestScripts;
+public class SearchScript {
+
 }

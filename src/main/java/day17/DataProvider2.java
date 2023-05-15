@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class DataProvider2 {
     @DataProvider(name="emiDataProvider")
-    public static Object[][] getEMIData() throws IOException {
+    public static Object[][] getData
+            () throws IOException {
         ExcelRW excelRW = new ExcelRW("C:\\Users\\DEVI\\IdeaProjects\\EY-Trainings\\src\\main\\resources\\EMI.xlsx");
         int irows = excelRW.getRowCount("Sheet1");
         int icols= excelRW.getColumnCount("Sheet1");
@@ -16,9 +17,9 @@ public class DataProvider2 {
         for (int irow=0;irow<=irows;irow++)
         {
 //            iterate through each column
-            for (int icol=0;icol<=icols;icol++)
+            for (int icol=1;icol<=icols;icol++)
             {
-                objarr[irow][icol]=excelRW.readCellValue("Sheet1",irows,icols);
+                objarr[irow][icol]=excelRW.readCellValue("Sheet1",irow,icol);
             }
         }
         return objarr;
