@@ -19,6 +19,7 @@ import org.testng.annotations.Parameters;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 public class BaseScript {
@@ -47,17 +48,17 @@ public class BaseScript {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-                driver.get("https://books.rediff.com/");
-                driver.manage().window().maximize();
+
                 break;
 //
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
-                driver.get("https://books.rediff.com/");
-                driver.manage().window().maximize();
                 break;
         }
+        driver.get("https://books.rediff.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
     /**

@@ -2,7 +2,7 @@ package automatedScripts.TestScripts;
 
 import automatedScripts.Commons.BaseScript;
 import automatedScripts.DataProviders.DataLogin;
-import automatedScripts.DataProviders.HomePage;
+import automatedScripts.Pages.HomePage;
 import automatedScripts.DataProviders.SignInPage;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;

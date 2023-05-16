@@ -7,8 +7,7 @@ import java.io.IOException;
 
 public class DataProvider2 {
     @DataProvider(name="emiDataProvider")
-    public static Object[][] getData
-            () throws IOException {
+    public static Object[][] getData() throws IOException {
         ExcelRW excelRW = new ExcelRW("C:\\Users\\DEVI\\IdeaProjects\\EY-Trainings\\src\\main\\resources\\EMI.xlsx");
         int irows = excelRW.getRowCount("Sheet1");
         int icols= excelRW.getColumnCount("Sheet1");
