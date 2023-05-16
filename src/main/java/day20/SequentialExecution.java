@@ -17,6 +17,8 @@ import java.util.Date;
    public class SequentialExecution extends Base {
         @Test
         public void EMIApp() throws IOException {
+            myTest = extent.createTest("EMI TestReport");
+            myTest.log(Status.PASS,"App Launched Successfully");
             //Enter the value//
             driver.findElement(By.id("loanamount")).sendKeys("15000");
             myTest.log(Status.PASS,"Entered Loanamount");

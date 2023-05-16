@@ -24,8 +24,6 @@ public class Base {
         extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark3.html");
         extent.attachReporter(spark);
-        myTest = extent.createTest("EMI TestReport");
-        myTest.log(Status.PASS,"App Launched Successfully");
     }
     @Parameters("browser")
     @BeforeMethod

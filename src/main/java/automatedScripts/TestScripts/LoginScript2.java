@@ -1,7 +1,8 @@
 package automatedScripts.TestScripts;
 
-import automatedScripts.Commons.BaseScript;
+import automatedScripts.Commons.BaseScript2;
 import automatedScripts.DataProviders.DataLogin;
+import automatedScripts.DataProviders.DataLogin2;
 import automatedScripts.Pages.HomePage;
 import automatedScripts.DataProviders.SignInPage;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -10,8 +11,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class LoginScript2 extends BaseScript {
-    @Test(dataProvider = "validLogin",dataProviderClass = DataLogin.class)
+public class LoginScript2 extends BaseScript2 {
+    @Test(dataProvider = "valid_Login",dataProviderClass = DataLogin2.class)
     public void validLogin(String TC_ID,String Username,String Password)
     {
         HomePage homePage = new HomePage(driver);
@@ -42,7 +43,7 @@ public class LoginScript2 extends BaseScript {
         }
 
     }
-    @Test(dataProvider = "invalidLogin",dataProviderClass = DataLogin.class)
+    @Test(dataProvider = "invalid_Login",dataProviderClass = DataLogin2.class)
     public void invalidLogin(String TC_ID,String Username,String Password) throws IOException {
         HomePage homePage = new HomePage(driver);
         SignInPage signInPage = new SignInPage(driver);

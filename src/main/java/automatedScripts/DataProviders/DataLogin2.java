@@ -1,21 +1,23 @@
 package automatedScripts.DataProviders;
+
 import day14_excel.ExcelRW;
 import org.testng.annotations.DataProvider;
+
 import java.io.IOException;
 
-public class DataLogin {
-    @DataProvider(name = "validLogin")
+public class DataLogin2 {
+    @DataProvider(name = "valid_Login")
     public static Object[][] validLogin() throws IOException {
-        return getData("Rediff1", "valid_login");
+        return getData("Sheet1", "valid_login");
     }
 
-    @DataProvider(name = "invalidLogin")
+    @DataProvider(name = "invalid_Login")
     public static Object[][] invalidLogin() throws IOException {
-        return getData("Rediff1", "invalid_login");
+        return getData("Sheet1", "invalid_login");
     }
 
     public static Object[][] getData(String Sheetname, String Scriptname) throws IOException {
-        ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\main\\resources\\Rediff.xlsx");
+        ExcelRW excelRW = new ExcelRW(System.getProperty("user.dir") + "\\src\\main\\resources\\Rediff2.xlsx");
         int irows = excelRW.getRowCount(Sheetname);
         int icols = excelRW.getColumnCount(Sheetname);
         int count = 0;

@@ -1,11 +1,12 @@
 package automatedScripts.TestScripts;
+
 import automatedScripts.Commons.BaseScript;
 import automatedScripts.DataProviders.DataLogin;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class LoginScript extends BaseScript {
-    @Test(dataProvider = "validlogin",dataProviderClass = DataLogin.class)
+    @Test(dataProvider = "validLogin",dataProviderClass = DataLogin.class)
     public void validLogin(String TC_ID,String Username,String Password)
     {
         //        Click on Sign IN
@@ -30,7 +31,7 @@ public class LoginScript extends BaseScript {
         }
 
     }
-    @Test(dataProvider = "invalidlogin",dataProviderClass = DataLogin.class)
+    @Test(dataProvider = "invalidLogin",dataProviderClass = DataLogin.class)
     public void invalidLogin(String TC_ID, String Username,String Password)
     {
 //        Click on Sign IN

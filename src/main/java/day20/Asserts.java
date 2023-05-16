@@ -1,2 +1,4 @@
-package day20;public class Asserts {
+package day20;
+public class Asserts {
+
 }

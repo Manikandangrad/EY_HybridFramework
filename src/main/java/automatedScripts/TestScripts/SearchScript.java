@@ -1,17 +1,15 @@
 package automatedScripts.TestScripts;
 
-import automatedScripts.Commons.BaseScript;
+import automatedScripts.Commons.BaseScript2;
 import automatedScripts.DataProviders.DataSearch;
-import automatedScripts.DataProviders.SignInPage;
 import automatedScripts.Pages.HomePage;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static automatedScripts.Commons.BaseScript.extent;
 import static org.apache.maven.shared.utils.StringUtils.replace;
 
-public class SearchScript extends BaseScript {
+public class SearchScript extends BaseScript2 {
     @Test(dataProvider = "DataSearch",dataProviderClass = DataSearch.class,groups={"Reg","Prod","Dev"})
 public  void invalid_Search(String TC_ID,String Scriptname,String searchItem,String ExpectedCount) throws InterruptedException {
     HomePage homePage=new HomePage(driver);

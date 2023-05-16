@@ -8,17 +8,17 @@ import java.io.IOException;
 public class DataProvider2 {
     @DataProvider(name="emiDataProvider")
     public static Object[][] getData() throws IOException {
-        ExcelRW excelRW = new ExcelRW("C:\\Users\\DEVI\\IdeaProjects\\EY-Trainings\\src\\main\\resources\\EMI.xlsx");
-        int irows = excelRW.getRowCount("Sheet1");
-        int icols= excelRW.getColumnCount("Sheet1");
+        ExcelRW excelRW = new ExcelRW("C:\\Users\\DEVI\\IdeaProjects\\EY-Trainings\\src\\main\\resources\\EMIScript.xlsx");
+        int irows = excelRW.getRowCount("EMI")+1;
+        int icols= excelRW.getColumnCount("EMI")-1;
         Object[][] objarr = new Object[irows][icols];
 //        iterate through each row
-        for (int irow=0;irow<=irows;irow++)
+        for (int irow=1;irow<irows;irow++)
         {
 //            iterate through each column
-            for (int icol=1;icol<=icols;icol++)
+            for (int icol=0;icol<icols;icol++)
             {
-                objarr[irow][icol]=excelRW.readCellValue("Sheet1",irow,icol);
+                objarr[irow][icol]=excelRW.readCellValue("EMI",irow,icol);
             }
         }
         return objarr;
