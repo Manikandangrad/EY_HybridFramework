@@ -2,6 +2,7 @@ package automatedScripts.Commons;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.maven.shared.utils.io.FileUtils;
@@ -24,7 +25,7 @@ import java.util.Date;
 public class BaseScript2 {
    public WebDriver driver;
    public static ExtentReports extent;
-   public ExtentTest mytest;
+    public ExtentTest mytest;
     /**
      * Initialise the Report
      */
@@ -32,8 +33,9 @@ public class BaseScript2 {
    public void reportSetup()
    {
        extent = new ExtentReports();
-       ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark2.html");
+       ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark5.html");
        extent.attachReporter(spark);
+
    }
 
     /**
@@ -47,7 +49,6 @@ public class BaseScript2 {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
-
                 break;
 //
             case "edge":

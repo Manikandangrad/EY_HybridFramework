@@ -5,6 +5,7 @@ import automatedScripts.DataProviders.DataLogin;
 import automatedScripts.DataProviders.DataLogin2;
 import automatedScripts.Pages.HomePage;
 import automatedScripts.DataProviders.SignInPage;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import org.testng.annotations.Test;
@@ -13,12 +14,12 @@ import java.io.IOException;
 
 public class LoginScript2 extends BaseScript2 {
     @Test(dataProvider = "valid_Login",dataProviderClass = DataLogin2.class)
-    public void validLogin(String TC_ID,String Username,String Password)
+    public void validLogin(String TC_ID,String Scriptname,String Username,String Password)
     {
         HomePage homePage = new HomePage(driver);
         SignInPage signInPage = new SignInPage(driver);
 
-        extent.createTest(TC_ID);
+        mytest= extent.createTest(TC_ID);
         mytest.log(Status.PASS,"Successfully Launched Application");
 
         //        Click on Sign IN
@@ -44,11 +45,10 @@ public class LoginScript2 extends BaseScript2 {
 
     }
     @Test(dataProvider = "invalid_Login",dataProviderClass = DataLogin2.class)
-    public void invalidLogin(String TC_ID,String Username,String Password) throws IOException {
+    public void invalidLogin(String TC_ID,String Scriptname,String Username,String Password) throws IOException {
         HomePage homePage = new HomePage(driver);
         SignInPage signInPage = new SignInPage(driver);
-
-        extent.createTest(TC_ID);
+        mytest= extent.createTest(TC_ID);
         mytest.log(Status.PASS,"Successfully Launched Application");
 
 //        Click on Sign In

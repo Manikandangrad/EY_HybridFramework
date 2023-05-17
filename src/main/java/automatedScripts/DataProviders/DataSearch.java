@@ -5,12 +5,12 @@ import java.io.IOException;
 public class DataSearch {
     @DataProvider(name = "validSearch")
     public static Object[][] validSearch() throws IOException {
-        return DataProvider("Search","valid_Search");
+        return DataProvider("Search","valid_search");
     }
 
     @DataProvider(name = "invalidSearch")
     public static Object[][] invalidSearch() throws IOException {
-        return DataProvider("Search","invalid_Search");
+        return DataProvider("Search","invalid_search");
     }
 
     public static Object[][] DataProvider(String Sheetname, String Scriptname) throws IOException {

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class LoginScript extends BaseScript {
     @Test(dataProvider = "validLogin",dataProviderClass = DataLogin.class)
-    public void validLogin(String TC_ID,String Username,String Password)
+    public void validLogin(String TC_ID,String Scriptname,String Username,String Password)
     {
         //        Click on Sign IN
         driver.findElement(By.linkText("Sign In")).click();
@@ -32,7 +32,7 @@ public class LoginScript extends BaseScript {
 
     }
     @Test(dataProvider = "invalidLogin",dataProviderClass = DataLogin.class)
-    public void invalidLogin(String TC_ID, String Username,String Password)
+    public void invalidLogin(String TC_ID,String Scriptname, String Username,String Password)
     {
 //        Click on Sign IN
         driver.findElement(By.linkText("Sign In")).click();
