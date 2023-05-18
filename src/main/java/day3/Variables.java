@@ -7,6 +7,7 @@ public class Variables {
     public static int a=1;
 
 //Instance Variable
+    //Created on top of the main method.
     public int b=2;
     public int Increment()
     {
@@ -33,7 +34,7 @@ public class Variables {
     //Output for Class Variable
     System.out.println("Class Variable");
     System.out.println(Variables.a);
-    System.out.println(a+c+d);
+    System.out.println(Variables.a+c+d);
 }
 
 }

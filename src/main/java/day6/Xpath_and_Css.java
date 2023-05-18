@@ -3,7 +3,8 @@ package day6;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Xpath_and_Css {
+public class
+Xpath_and_Css {
     public static void main(String[] args)
     {
         //OPEN THE BROWSER
@@ -23,8 +24,17 @@ public class Xpath_and_Css {
         //Find the element using Relative Css : (using OR)
         driver.findElement(By.cssSelector("input[name='reg_email_'],input[id='u_0_g_bE']")).sendKeys("hello@gmail.com");
 
+        //Find the element using Relative Css: (using AND)
+        //driver.findElement(By.cssSelector("input[name='reg_email_'] [id='u_0_g_bE']")).sendKeys("hello");
+
         //Find the element using Relative Xpath:
         driver.findElement(By.xpath("//input[@id='password_step_input']")).sendKeys("hello");
+
+        //Find the element using Relative Xpath : (using OR)
+        //driver.findElement(By.cssSelector("//input[@name='reg_email_' or @id='u_0_g_bE']")).sendKeys("hello@gmail.com");
+
+        //Find the element using Relative Xpath: (using AND)
+        //driver.findElement(By.cssSelector("//input[@name='reg_email_' and @id='u_0_g_bE']")).sendKeys("hello");
 
     }
 }
